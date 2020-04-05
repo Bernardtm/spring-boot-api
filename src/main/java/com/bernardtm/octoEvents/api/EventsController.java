@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,13 +21,7 @@ public class EventsController {
 
 	@Cacheable(value="event", key="#issueId")
 	@GetMapping(value = "/{issueId}/events")
-	public ResponseEntity<List<IssueEventDto>> events (@PathVariable Long issueId) {
-		List<IssueEventDto> issueEventList = service.getIssueEvent(issueId);
-		
-		if (issueEventList.isEmpty()) {
-			return ResponseEntity.noContent().build();
-		} else {
-			return ResponseEntity.ok(issueEventList);
-		}
+	public List<IssueEventDto> events (@PathVariable Long issueId) {
+		return service.getIssueEvent(issueId);
 	}
 }

@@ -5,10 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.ApplicationPidFileWriter;
 
 @SpringBootApplication
-public class OctoEventsApplication {
+public class OctoEvents {
 
 	public static void main(String[] args) {
-		SpringApplication springApplication = new SpringApplication(OctoEventsApplication.class);
+		SpringApplication springApplication = new SpringApplication(OctoEvents.class);
 		springApplication.addListeners(new ApplicationPidFileWriter("octo-events.pid"));
 		springApplication.run(args);
 	}

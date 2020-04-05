@@ -1,18 +1,11 @@
-package com.bernardtm.octoEvents.health;
-
-import static org.hamcrest.CoreMatchers.is;
-
-//import static io.restassured.module.jsv.JsonSchemaValidator.*;
+package com.bernardtm.octoEvents.contract;
 
 import org.testng.annotations.Test;
 
-//import io.restassured.RestAssured;
-
-
-public class HealthCheckTest {
+public class ContractTest {
 	
-	@Test(groups="health")
-	public void healthCheckViaActuator() {
+	@Test(groups="contract")
+	public void healthCheckViaActuator1() {
 //		RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
 //		RestAssured.basePath = "/actuator";
 //
@@ -24,6 +17,5 @@ public class HealthCheckTest {
 //
 //		RestAssured.baseURI = "/octo-events";
     }
-
 
 }

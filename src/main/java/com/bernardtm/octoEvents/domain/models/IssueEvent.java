@@ -19,11 +19,15 @@ public class IssueEvent {
 	
 	private Long number;
 	
+	private String type;
+	
 	private String action;
 	
-	private String created_at;
+	private Boolean active;
 	
-	private String title;
+	private String[] events;
+	
+	private Long app_id;
 
 	public Long getId() {
 		return id;
@@ -33,12 +37,36 @@ public class IssueEvent {
 		this.id = id;
 	}
 
-	public Long getNumber() {
-		return number;
+	public String getType() {
+		return type;
 	}
 
-	public void setNumber(Long number) {
-		this.number = number;
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public Boolean getActive() {
+		return active;
+	}
+
+	public void setActive(Boolean active) {
+		this.active = active;
+	}
+
+	public String[] getEvents() {
+		return events;
+	}
+
+	public void setEvents(String[] events) {
+		this.events = events;
+	}
+
+	public Long getApp_id() {
+		return app_id;
+	}
+
+	public void setApp_id(Long app_id) {
+		this.app_id = app_id;
 	}
 
 	public String getAction() {
@@ -49,20 +77,11 @@ public class IssueEvent {
 		this.action = action;
 	}
 
-	public String getCreated_at() {
-		return created_at;
+	public Long getNumber() {
+		return number;
 	}
 
-	public void setCreated_at(String created_at) {
-		this.created_at = created_at;
+	public void setNumber(Long number) {
+		this.number = number;
 	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
 }
